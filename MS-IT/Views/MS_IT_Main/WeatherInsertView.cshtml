@@ -1,0 +1,32 @@
+﻿@using MS_IT.Models
+@model CityName
+
+@*
+*@
+@{
+}
+<h1>Please insert a German City or Village for your present weather status!</h1>
+<hr />
+
+<div class="row">
+	<div class="col-6 ">
+
+		<div class="card">
+			<!--This form pushes the databound inserted name to the CityName Model-->
+			<div class="card-header">
+				<form asp-controller="MS_IT_Main" asp-action="WeatherShowResultView" method="post">
+					<div class="mb-3">
+						<label class="form-label">City</label>
+						<input asp-for="Name" type="text" class="form-control" />
+					</div>
+					<div class="mb-3">
+						<button type="submit" class="btn btn-primary">Abfrage</button>
+					</div>
+				</form>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+

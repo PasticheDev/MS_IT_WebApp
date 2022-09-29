@@ -1,0 +1,50 @@
+﻿@model CityName
+@using System.Net.Http;
+@using Newtonsoft.Json;
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+	@{
+		string temperatureData ="";
+		
+		// API Call and conversion of the temperature into integer to cut off decimal point numbers
+			using (var client = new HttpClient())
+			{
+				// insert of the chosen city name into URI string. In Future all Cities around the world will be accepted.
+				var uri = new Uri("https://api.openweathermap.org/data/2.5/weather?q="+ Model.Name +",de&APPID=b1d1c0a222605a5c659788b43b68a425&units=metric");
+				var result = client.GetAsync(uri).Result;
+
+				if (result.StatusCode == System.Net.HttpStatusCode.OK)
+				{
+					var json = result.Content.ReadAsStringAsync().Result;
+					Rootobject root = JsonConvert.DeserializeObject<Rootobject>(json);
+					int temp = Convert.ToInt32(root.main.temp);
+					temperatureData = "In " + Model.Name + " liegt die Temperatur aktuell bei "+ Convert.ToString(temp) + " °C";
+				}
+			}
+
+		// Simple showcase of the receipt of temperature data. Will evolve in future.
+		<div class="row">
+			<div class="col-6 ">
+
+				<div class="card">
+
+					<div class="card-body row">
+					
+						<div class="col-10">
+							<label>@temperatureData</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+}
+</body>
+</html>
+
+
