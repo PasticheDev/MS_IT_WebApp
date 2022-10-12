@@ -1,18 +1,61 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
+
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    margin-top: 70px;
+}
+
+
+nav div {
+    background-color: #d6e3d8;
+    margin: -10px;
+    padding-top: 5px;
+    padding-left: 40px;
+}
+
+#navDiv {
+    margin: 11px;
+}
+
+#contentRowDiv {
+    min-height: 300px;
+}
+
+#mainImages {
+    max-width: 476px;
+    max-height: auto;
+}
+
+#pictureDiv{
+    
+}
+
+img{
+    margin-left:-12px;
+}
+
+footer{
+    padding-left:45%;
+}
+
+#pSmall {
+    padding: 60px 30px 20px 30px;
+}
+
+#pBig {
+    padding: 70px 30px 20px 40px;
 }
