@@ -12,11 +12,12 @@ html {
 html {
     position: relative;
     min-height: 100%;
+    box-sizing:border-box;
 }
 
 body {
     margin-bottom: 60px;
-    margin-top: 70px;
+    margin-top: 8%;
 }
 
 
@@ -31,21 +32,17 @@ nav div {
     margin: 11px;
 }
 
-#contentRowDiv {
-    min-height: 300px;
-}
+
 
 #mainImages {
-    max-width: 476px;
-    max-height: auto;
+    max-width: 500px;
+    max-height: 400px;
 }
 
-#pictureDiv{
-    
-}
 
 img{
-    margin-left:-12px;
+    margin-left:0px;
+
 }
 
 footer{
@@ -53,9 +50,25 @@ footer{
 }
 
 #pSmall {
-    padding: 60px 30px 20px 30px;
+    padding: 5% 5% 5% 5%;
+    text-align: justify;
+
 }
 
 #pBig {
-    padding: 70px 30px 20px 40px;
+    padding: 5% 5% 5% 5%;
+    text-align: justify;
+    background-color: #d6e3d8;
+
+}
+
+div{
+    overflow: hidden;
+
+}
+
+#flexContainer{
+    margin-left:-1%;
+    margin-right:-1%;
+    margin-bottom:-1%;
 }
